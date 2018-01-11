@@ -1,54 +1,54 @@
 $(function(){
-    
+
     /* wait until the document is loaded before starting the script */
     console.log( 'jQuery Started.' );
-    
+
     function HorizontalScroller(elem) {
         this.scrollbox = elem; //The scrollers viewable area
         this.scrollImages = this.scrollbox.find("img");
         this.leftScrollControl = this.scrollbox.siblings(".left-scroll");
         this.rightScrollControl = this.scrollbox.siblings(".right-scroll");
-    
+
         this.scrollbox.on("scroll", this.evaluateControlVisibility.bind(this));
-        };
+        }
 
     HorizontalScroller.prototype = {
         scrollboxWidth: function() {
             return this.scrollbox.outerWidth(true);
         },
-        
+
         currentScrollPosition: function() {
             return this.scrollbox.scrollLeft();
         },
-        
+
         currentRightPosition: function() {
             return this.currentScrollPosition() + this.scrollboxWidth() - this.totalWidths();
         },
-        
+
         // Maps the image width of each image in the scroller
         imageWidths: function() {
             return $.map(this.scrollImages, function(img) {
                 return $(img).outerWidth(true);
-            })
-        }, 
-        
-        // Returns the total width of all the images - 
+            });
+        },
+
+        // Returns the total width of all the images -
         // the total of the visible and overflow content.
         totalWidths: function() {
-            return this.imageWidths().reduce(function(a,b) { return a+b});
+            return this.imageWidths().reduce(function(a,b) { return a+b;});
         },
-        
+
         // Returns the average width of all the images
         avgWidth: function() {
             return this.totalWidths() / this.imageWidths().length;
         },
-        
+
         // Determines the number of images in view area.
         // Number of images changes with responsive CSS
         imagesAcross: function() {
             return Math.round( this.scrollboxWidth() / this.avgWidth() );
         },
-            
+
         // maps the offset x-distance of each image
         // from the left edge of the view area
         imageOffsets: function() {
@@ -56,7 +56,7 @@ $(function(){
                 return Math.round($(img).position().left);
             });
         },
-            
+
         // Returns the index of the first number in the given array
         // greater than the given value, or, returns the index of
         // the first positive number in the array
@@ -71,31 +71,31 @@ $(function(){
                 }
                 return firstIndex;
                 },
-                    
+
         // Returns the index of first image that is completely in view
         // within the scrollbox
         firstVisibleImageIndex: function() {
             return this.indexOfFirst(this.imageOffsets());
         },
-        
+
         // Returns the first image that is completely in view
         // within the scrollbox
         firstVisibleImage: function() {
             return this.scrollImages[this.firstVisibleImageIndex()];
         },
-            
+
         // Returns the index of the last image with its left edge in view
         // within the scrollbox
         lastVisibleImageIndex: function() {
             return this.firstVisibleImageIndex() + this.imagesAcross();
         },
-            
+
         // Returns the last image with its left edge in view
         // within the scrollbox
             lastVisibleImage: function() {
                 return this.scrollImages[this.lastVisibleImageIndex()];
             },
-        
+
         // Returns the difference between the scrollboxes left edge
         // and the left edge of the first fully visible image, that is,
         // how far in the first fully visible image is
@@ -103,7 +103,7 @@ $(function(){
             var offset = $(this.firstVisibleImage()).position().left;
             return Math.round(offset);
         },
-            
+
         // Returns the combined scroll amount that the images have to travel
         // in order to land evenly within the scroll window. The resulting
         nextScrollPosition: function(direction) {
@@ -124,39 +124,39 @@ $(function(){
                 }
                 return nextScrollPosition;
             },
-                
+
         // Triggers the animation
         animateScroll: function(direction) {
             resetFocusedImg();
             var scroller = this;
             setTimeout(function() {
                 scroller.scrollbox.animate({
-                    
+
         scrollLeft: scroller.nextScrollPosition(direction)
-                }, this.scrollboxWidth())
+      }, this.scrollboxWidth());
             }.bind(this), 100);
         },
-        
+
         hideScrollControl: function(control) {
             control.addClass("invisible");
         },
-            
+
         showScrollControl: function(control) {
             control.removeClass("invisible");
         },
-            
+
         scrollControlVisibility: function(control) {
             return control.hasClass("invisible");
         },
-            
+
         scrollAtZero: function() {
             return this.currentScrollPosition() == 0;
         },
-            
+
         scrollAtMax: function() {
             return this.currentRightPosition() >= -1;
         },
-            
+
         evaluateControlVisibility: function() {
             var left = this.leftScrollControl;
             var right = this.rightScrollControl;
@@ -164,17 +164,17 @@ $(function(){
         .scrollControlVisibility(left);
             var rightIsInvisible = this
         .scrollControlVisibility(right);
-            
+
             if (this.scrollAtZero()) this.hideScrollControl(left);
             if (this.scrollAtMax()) this.hideScrollControl(right);
             if (!this.scrollAtZero() && leftIsInvisible) this.showScrollControl(left);
             if (!this.scrollAtMax() && rightIsInvisible) this.showScrollControl(right);
             }
         };
-        
+
         // End HorizontalScroller.prototype
         var scrollers = {};
-  
+
         // Detects scrollers in the DOM
         function detectScrollers() {
             return $.map($(".horiz-scroll"), function(scroller) {
@@ -190,10 +190,10 @@ $(function(){
         HorizontalScroller( $(scroller) );
             });
         }
-        
+
         // Gets the scroll direction to pass to animation function
         function getScrollDirection(button) {
-            return (button.hasClass("left-scroll")) ? "left" : "right"
+            return (button.hasClass("left-scroll")) ? "left" : "right";
         }
 
         // Triggers the scroll animation for specific scroller
@@ -203,7 +203,7 @@ $(function(){
             var scrollDirection = getScrollDirection(button);
             scrollers[scrollId].animateScroll(scrollDirection);
         }
-        
+
         // Scroll buttons listener
         function listenForScroll() {
             $(".left-scroll, .right-scroll").on("click", function() {
@@ -211,7 +211,7 @@ $(function(){
                 triggerAnimation(button);
             });
         }
-        
+
         function resetFocusedImg() {
             $(".focused").removeClass("focused");
         }
@@ -225,4 +225,4 @@ $(function(){
 
         //Begins
         scrollerInit();
-})
+});
