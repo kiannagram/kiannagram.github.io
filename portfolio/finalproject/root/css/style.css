@@ -1,10 +1,10 @@
-@import url(https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,500,500i);
+@import url('https://fonts.googleapis.com/css?family=Quattrocento+Sans:700');
 
 /* CSS Reset Begins */
 a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,main{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
 /* CSS Reset Ends */
 
-
+/* IMPORT FONTS */
 @font-face{
     font-family: 'Didot';
     src: url(../fonts/TheanoDidot-Regular.ttf) format('ttf');
@@ -12,609 +12,267 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
     font-style: normal;
 }
 
-h1{
-    font-family: 'Didot';
-    font-size: 170px;
-    text-transform: uppercase;
-    max-width: 590px;
-    line-height: 160px;
-    background: rgba(212, 166, 169, 0.5);
-    padding: 230px 0px 90px 20px;
+@font-face{
+    font-family: 'Helvetica';
+    src: url(../fonts/HelveticaNeue.ttf) format('ttf');
+    font-weight: normal;
+    font-style: normal;
 }
 
-h2{
-    font-family: 'EB Garamond', serif;
-    font-size: 30px;
-    font-style: italic;
-    max-width: 200px;
-    float: right;
+
+/* BASIC STYLING */
+h1{
+    font-family: 'Didot';
+    font-size: 55px;
+    max-width: 300px;
+    line-height: 55px;
+    display: block;
 }
 
 h3{
     font-family: 'Didot';
-    font-size: 57px;
-    text-transform: uppercase;
-    padding: 30px 0px 30px 0px;
-    line-height: 72px;
-}
-
-abbr{ text-decoration: none; }
-    
-p{
-    font-family: 'EB Garamond', serif;
-    font-size: 20px;
-    padding-bottom: 20px;
-    line-height: 25px;
-}
-
-a{
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #797979;
-}
-
-.summary, .preamble, .main supporting, .participation, .benefits, #zen-requirements, footer, .explanation, .design-selection, .design-archives, footer{
-    margin: 0 auto;
-    max-width: 960px;
-    padding: 10px;
-}
-
-/* HOME PAGE */
-#zen-intro h2{ margin-top: -680px; } 
-
-header::before{
-    content: '';
-    display: block;
-    background-image: url(../images/lean-web.jpg);
-    width: 722px;
-    height: 680px;
-    position: absolute;
-    right: 0;
-    margin-top: 40px;
-    margin-right: 100px;
-    z-index: -1000;
-}
-
-h1::before{
-    content: "";
-    position: relative;
-    height: 1px;
-    width: 75px;
-    border-bottom: 1px solid black;
-    display: block;
-    top: -40px;
-    left: 10px;
-}
-
-
-
-/* RESOURCES */
-
-.resources{ display: none; }
-
-.zen-resources{
-    display: block;
-    position: absolute;
-    top: 0;
-    padding-left: 30px;
-    margin-top: 40px;
-}
-
-.zen-resources ul li{ margin-bottom: 8px; }
-
-.zen-resources ul li a{ color: black; }
-
-.zen-resources ul li a:hover{ color: #797979; }
-
-
-
-/* ZEN SUMMARY */
-#zen-summary{
-    padding-top: 100px;
-    padding-bottom: 40px;
-    max-width: 850px;
-    -ms-flex-line-pack: center;
-    align-content: center;
-    text-align: center;
-}
-
-
-
-/* THE ROAD TO ENLIGHTENMENT */
-
-.preamble h3{
-    text-align: center;
-    padding-bottom: 80px;
-}
-
-#zen-preamble::before{
-    content: "";
-    position: relative;
-    height: 1px;
-    width: 75px;
-    top: 140px;
-    border-bottom: 1px solid black;
-    display: block;
-    margin: 0 auto;
-}
-
-.preamble p{
-    max-width: 300px;
-    padding-right: 20px;
-    float: left;
-    display: block;
-    text-align: inherit;
-    margin-bottom: 90px;
-}
-
-
-
-/* SO WHAT IS THIS ABOUT */
-.explanation{ margin-top: 850px; }
-
-.explanation h3{
-    max-width: 270px;
-    background: rgba(212, 166, 169, 0.5);
-    position: absolute;
-    left: 50%;
-    padding: 610px 360px 30px 30px;
-    margin-top: -650px;
-    margin-left: 60px;
-    right: 0;
-}
-
-.explanation p{ max-width: 480px; }
-
-.explanation::before{
-    content: "";
-    position: relative;
-    height: 1px;
-    width: 75px;
-    bottom: 42px;
-    border-bottom: 1px solid black;
-    display: block;
-}
-
-#zen-explanation::after{
-    content: '';
-    display: block;
-    background-image: url(../images/bridge-web.jpg);
-    width: 720px;
-    height: 480px;
-    position: absolute;
-    left: 50%;
-    z-index: -1001;
-    margin-top: -940px;
-    margin-left: -480px;
-}
-
-
-/* PARTICIPATION */
-.participation{ margin-top: 810px; }
-
-.participation h3{
-    background: rgba(212, 166, 169, 0.5);
-    padding: 500px 0px 30px 360px;
-    max-width: 94px;
-    position: absolute;
-    left: 50%;
-    margin-top: -640px;
-    right: 0;
-    margin-left: -840px;
-}
-
-.participation h3::before{
-    content: '';
-    display: block;
-    background-image: url(../images/bag-web.jpg);
-    width: 940px;
-    height: 520px;
-    position: absolute;
-    margin: 0 auto;
-    z-index: -1001;
-    margin-top: -560px;
-}
-
-.participation p{
-    max-width: 300px;
-    display: block;
-}
-
-.participation p:last-child{ 
-    float: right;
-    margin-top: -440px;
-}
-
-.participation::before{
-    content: 'STRONG VISUAL DESIGN HAS ALWAYS BEEN OUR FOCUS.';
-    max-width: 200px;
-    font-size: 20px;
-    text-align: center;
-    line-height: 40px;
-    position: absolute;
-    right: auto;
-    left: auto;
-    margin-top: 50px;
-    border-bottom: 1px solid black;
-    border-top: 1px solid black;
-    padding-top: 70px;
-    padding-bottom: 70px;
-    margin-left: 370px;
-}
-
-.participation::after{
-    content: '';
-    display: block;
-    position: absolute;
-    background-image: url(../images/sunglasses-web.jpg);
-    width: 230px;
-    height: 160px;
-    left: 50%;
-    right: 0;
-    margin-left: 240px;
-    margin-top: -180px;
-    z-index: -1002;
-}
-
-.benefits h3::before{
-    content:'';
-    height: 65px;
-    width: 140px;
-    background: rgba(212, 166, 169, 0.5);
-    position: absolute;
-    right: 50%;
-    left: 0;
-    margin-left: 530px;
-    margin-top: -760px;
-}
-
-
-/* BENEFITS */
-.benefits{
-    margin-top: 600px;
-    margin-bottom: 670px;
-}
-
-.benefits h3{ 
-    background: rgba(212, 166, 169, 0.5);
-    padding: 430px 336px 30px 430px;
-    position: absolute;
-    left: 50%;
-    margin-left: -350px;
-    margin-top: -450px;
-    right: 0;
-}
-
-.benefits p{
-    max-width: 400px;
-    margin-top: 170px;
-    float: right;
-}
-
-.benefits::before{
-    content: '';
-    display: block;
-    position: absolute;
-    background-image: url(../images/feet-web.jpg);
-    width: 460px;
-    height: 400px;
-    margin-top: -500px;
-    z-index: -1003;
-}
-
-.benefits::after{
-    content: '';
-    display: block;
-    position: absolute;
-    background-image: url(../images/portrait-web.jpg);
-    width: 460px;
-    height: 655px;
-    z-index: -1004;
-    margin-top: -80px;
-}
-
-.benefits p::before{
-    content: "";
-    position: relative;
-    height: 1px;
-    width: 75px;
-    bottom: 40px;
-    border-bottom: 1px solid black;
-    display: block;
-}
-
-
-
-/* REQUIREMENTS */
-#zen-requirements{
-    margin-top: 1600px;
-    margin-bottom: 700px;
-}
-
-.requirements h3{
-    font-family: 'Didot';
-    font-size: 160px;
-    text-transform: uppercase;
-    line-height: 170px;
-    
-    
-    float: left;
-    background: rgba(212, 166, 169, 0.5);
-    padding-left: 20px;
-    padding-bottom: 450px;
-    max-width: 600px;
-    position: absolute;
-    left: 0;
-    margin-top: -870px;
-    
-    /*overflow-wrap: break-word;
-    position: absolute; */
-}
-
-.requirements h3::before{
-    content: '';
-    display: block;
-    background-image: url(../images/newyork1-web.jpg);
-    width: 460px;
-    height: 475px;
-    position: absolute;
-    left: 35%;
-    z-index: -1007;
-    margin-top: 270px;
-    margin-left: 10px;
-}
-
-.requirements h3::after{
-    content: '';
-    display: block;
-    position: absolute;
-    background-image: url(../images/newyork2-web.jpg);
-    width: 300px;
-    height: 475px;
-    left: 35%;
-    z-index: -1006;
-    margin-top: -70px;
-    margin-left: 490px;
-    
-} 
-
-.requirements p{
-    max-width: 410px;
-    display: block;
-    position: relative;
-    margin-left: auto;
-}    
-
-.requirements p:nth-child(2){
-    margin-left: 0;
-    max-width: 480px;
-}
-
-.requirements p:nth-child(3){ margin-top: -170px;}
-
-.requirements::before{
-    content: '';
-    display: block;
-    background-image: url(../images/street-web.jpg);
-    width: 380px;
-    height: 440px;
-    position: absolute;
-    z-index: -1009;
-    margin-top: 190px;
-    margin-left: 80px;
-}
-
-.requirements::after{
-    content:'';
-    height: 65px;
-    width: 140px;
-    background: rgba(212, 166, 169, 0.5);
-    position: absolute;
-    margin-top: -430px;
-}
-
-
-
-/* ARCHIVES */
-.design-archives{ 
-    margin-top: -210px;
-    text-align: center;
-}
-
-.design-archives::before{
-    content: '';
-    position: relative;
-    height: 1px;
-    width: 75px;
-    bottom: 20px;
-    border-bottom: 1px solid black;
-    display: block;
-    margin: 0 auto;
-}
-
-.design-archives .viewall::after{
-    content: '';
-    position: relative;
-    height: 1px;
-    width: 75px;
-    bottom: 20px;
-    border-bottom: 1px solid black;
-    display: block;
-    margin: 0 auto;
-    padding-top: 660px;
-    z-index: -1010;
-}
-
-.design-archives h3{ display: none; }
-
-.design-archives .next a{ 
-    position: absolute;
-    margin-top: 100px;
-    left: 0;
-    right: 0;
-    font-family: 'EB Garamond', serif;
-    font-size: 30px;
-    font-style: italic;
-    text-transform: inherit;
-}
-
-.design-archives .next a:hover{ color: #797979; }
-
-.design-archives .viewall{
-    font-family: 'Didot';
-    font-size: 57px;
-    text-transform: uppercase;
-    padding-top: 30px;
-    max-width: 600px;
-    -ms-flex-line-pack: center;
-    align-content: center;
-    margin: 0 auto;
-}
-
-.design-archives .viewall a:hover{ color: #797979; }
-
-.design-archives .viewall a, .design-archives .next a{ color: black; }
-
-
-
-/* SELECT A DESIGN */
-.select{ display: none; }
-
-#design-selection{ margin-top: -350px;}
-
-#design-selection nav li{
-    float: left;
-    margin-right: 18px;
+    font-size: 122px;
+    line-height: 110px;
     margin-bottom: 20px;
-    border: 1px solid black;
-    width: 220px;
-    height: 225px;
-    display: block;
-    text-align: center;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
 }
 
-#design-selection nav li a{
-    color: black;
-    line-height: 30px;
-    display: block;
-}
-
-#design-selection nav li a:first-child{
-    margin-bottom: 90px;
-}
-
-#design-selection nav ul li .design-name{
+#site-header{
+    padding-left: 30px;
+    padding-right: 30px;
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 
-#design-selection nav a:hover{ color: #797979; }
-
-#design-selection nav li:hover{ background: rgba(212, 166, 169, 0.5); }
-
-.designer-name{ text-transform: inherit; }
-
-
-
-/* BY DAVID SHEA */
-.requirements p:nth-child(6){
-    font-family: 'EB Garamond', serif;
-    font-size: 30px;
-    font-style: italic;
-    line-height: 40px;
-    margin-top: 1000px;
-    margin-bottom: 200px;
-    position: absolute;
-    max-width: 100%;
-    text-align: center;
-    left: 0;
-    right: 0; 
-    
-    background: rgba(212, 166, 169, 0.5);
-    padding-top: 90px;
-    padding-bottom: 90px;   
+p{
+    font-family: 'Helvetica';
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 20px;
 }
-
-.requirements p:last-child a{ 
-    text-transform: inherit;
-    font-style: normal; 
-}
-
 
 /* FOOTER */
-footer{
+.footer{
+    display: none;
+    font-family: 'Helvetica';
+    font-size: 15px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     text-align: center;
-    margin: 0 auto;
-    position: absolute;
-    margin-top: 590px;
-    right: 0;
-    left: 0;
 }
 
-footer a{ padding-right: 100px; }
+.footer a{
+    text-decoration: none;
+    color: black;
+}
 
-footer a:last-child{ padding-right: 0px; }
+.footer a:hover{ font-weight: 700; }
 
-.zen-validate-html::before{
-    content: '';
+
+/* NAV */
+#site-nav{
+    font-weight: 400;
+    font-family: 'Helvetica';
+    font-size: 22px;
+    float: right;
+    margin-top: 80px;
+}
+
+#site-nav ul{
+    list-style-type: none;
+    overflow: hidden;
+}
+
+#site-nav li{
+    float: left;
+    margin-right: 30px;
+}
+
+#site-nav li:last-child{ margin-right: 0px; }
+
+#site-nav a{
+    color: black;
     display: block;
-    background-image: url(../images/html5-webjpg);
-    width: 75px;
-    height: 65px;
-    position: absolute;
-    margin-left: 170px;
-    margin-top: -20px;
+    text-decoration: none;
 }
 
-.zen-validate-css::before{
-    content: '';
-    display: block;
-    background-image: url(../images/css3-web.jpg);
-    width: 75px;
-    height: 65px;
-    position: absolute;
-    margin-top: -35px;
-    left: 50%;
-    margin-left: -160px;
+#site-nav a:hover,
+#site-nav .current{ font-weight: 700; }
+
+#site-nav > a{ display: none; }
+
+
+
+/**
+*ABOUT PAGE 
+**/
+#profile-photo{
+    float: left;
+    max-width: 100%;
+    margin-right: 30px;
+    margin-top: 10px;
 }
 
-.zen-license::before{
-    content: '';
-    display: block;
-    background-image: url(../images/cclogo-web.jpg);
-    width: 75px;
-    height: 65px;
-    position: absolute;
-    margin-top: -35px;
-    left: 50%;
-    margin-left: -20px;
+#about-bre{ 
+    padding-right: 20px;
+    padding-top: 70px;
+    overflow: hidden;
 }
 
-.zen-accessibility::before{
-    content: '';
-    display: block;
-    background-image: url(../images/accessible-web.jpg);
-    width: 75px;
-    height: 65px;
-    position: absolute;
-    margin-top: -35px;
-    left: 50%;
-    margin-left: 110px;
+/* social media links */
+#social{
+    font-family: 'Helvetica';
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 10px;
 }
 
-.zen-github::before{
-    content: '';
-    display: block;
-    background-image: url(../images/githublogo-web.jpg);
-    width: 75px;
-    height: 65px;
-    position: absolute;
-    margin-top: -35px;
-    left: 50%;
-    margin-left: 260px;
+#social ul{ list-style-type: none; }
+
+#social li{
+    float: left;
+    margin-right: 22px;
+    border-right: 2px solid black;
+    padding-right: 20px;
 }
 
+#social a{
+    text-decoration: none;
+    color: black;
+}
+
+#social li:last-child{ border-right: none; }
+
+
+/**
+*LANDSCAPE AND PORTRAIT SLIDER
+**/
+.horiz-scroll{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: -webkit-flex;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    overflow: visible;
+    position: relative;
+    max-height: 571px;
+}
+
+/* pushes the scrolling button section to the sides of the page */
+.horiz-scroll .scroller .left-scroll{ left: 0; }
+.horiz-scroll .scroller .right-scroll{ right: 0; }
+
+/* style and format the scrolling button section */
+.horiz-scroll .scroller .left-scroll, .horiz-scroll .scroller .right-scroll{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: -webkit-flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 2vw;
+    padding-top: 80px;
+    overflow-x: hidden;
+    z-index: 1; 
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; 
+    -webkit-justify-content: center;
+    position: absolute;
+    height: 100%;
+} 
+
+/* Add the scrolling arrows */
+.fa-angle-right::before{
+    content: ">";
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-size: 80px;
+}
+
+.fa-angle-left::before{
+    content: "<";
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-size: 80px;
+}
+
+/* style the scrolling arrow */
+.horiz-scroll .scroller .left-scroll p, .horiz-scroll .scroller .right-scroll p{
+    font-size: 3em;
+    color: white;
+    text-shadow: 0 0 10px #333;
+    margin: 0;
+}
+
+/* make the images scroll horizontally rather than vertically */
+.horiz-scroll .scroller .scrollable-x{
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.horiz-scroll .scroller .scrollable-x::-webkit-scrollbar{ 
+    display: none; 
+    width: .375em;
+    max-width: 12px;
+}
+
+/* Style of the images horizontally in the scroll bar */
+.horiz-scroll .scroller .scroll-images{
+    position: relative;
+    -webkit-box-flex: 8;
+    -ms-flex: 8;
+    flex: 8;
+    -webkit-flex: 8;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    -webkit-order: 2;
+    font-size: 0;
+    overflow-y: visible;
+    margin-top: 10px;
+    margin-bottom: -160px;
+    text-align: center;
+} 
+
+/* Size of the images */
+.horiz-scroll .scroller .scroll-images img{
+    width: 27.15%;
+    top: 0; 
+    -webkit-transition: all 100ms;
+    transition: all 100ms; 
+    position: relative; 
+}
+
+/* adjusting the size of the horizontal images in the landscape and portrait sections */
+#image-3{ width: 59.2%; }
+#image-4{ width: 59.2%; }
+#image-5{ width: 59.2%; }
+#image-10{ width: 59.2%; }
+#image-13{ width: 59.2%; }
+#portrait-3{ width: 59.9%; }
+
+/* Style the drop shadow on the arrows */
+.horiz-scroll .scroller .scroll-images img.focused{
+    z-index: 2;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    -webkit-transform: scale(1.25);
+    transform: scale(1.25);
+    height: 200%;
+    -webkit-transition: all 250ms ease-in-out, drop-shadow 0.5s;
+    transition: all 250ms ease-in-out, drop-shadow 0.5s;
+}
+
+/* make the left or right arrow disappear when you reach the last photo in the slideshow */
+.invisible{
+    opacity: 0;
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+}
 
 
 
@@ -622,812 +280,509 @@ footer a:last-child{ padding-right: 0px; }
 
 
 /**
-*IPAD LAYOUT 
+*IPAD LAYOUT - Social Button Fixes
 **/
-@media only screen and (max-width: 995px){
-    h1{
-        font-size: 120px; 
-        line-height: 110px;
-        max-width: 190px; 
-        padding: 130px 440px 20px 10px;
-        margin-top: 200px;
-    }
-    
-    h3{ 
-        font-size: 50px;
-        line-height: normal;
-    }
-    
-    p{
-        font-size: 18px;
-        line-height: normal;
-    }
-    
-    
-    /* HOME PAGE */
-    #zen-intro h2{
-        font-size: 25px;
-        max-width: 160px;
-        float: left;
-        margin-top: -450px;
-        margin-left: 20px;
-    }
-    
-    h1::before{
-        width: 50px;
-        top: -20px;
-    }
-    
-    header::before{
-        max-width: 100%;
-        padding-left: 60px;
-        margin-right: -65px;
-        margin-top: -250px;
-        position: absolute;
-        background-size: 100%;
-        background-repeat: no-repeat;
-        transform: scale(0.7, 0.7);
-    }
-    
-    
-    /* ZEN SUMMARY */
-    #zen-summary{ padding-top: 80px; }
-
-    
-    /* ROAD TO ENLIGHTENMENT */
-    .preamble h3{
-        padding-bottom: 80px;
-        max-width: 500px;
-        margin: 0 auto;
-        padding-top: 0px;
-    }
-    
-    #zen-preamble::before{ top: 160px; }
-    
-    .preamble p{
-        max-width: inherit;
-        margin: 0 auto;
-        padding-right: 0px;
-        float: none;
-        margin-bottom: 10px;
-        text-align: center;
-    }
-    
-    /* SO WHAT IS THIS ABOUT */
-    .explanation{ margin-top: 730px; }
-
-    .explanation p{ max-width: 400px; }
-
-    #zen-explanation::after{
-        margin: 0 auto;
-        right: auto;
-        left: auto;
-        margin-top: -940px;
-    }
-    .explanation h3{
-        left: auto;
-        right: 0;
-        
-        padding: 610px 20px 30px 30px;
-        margin-top: -650px;
-        margin-left: 60px;
-        right: 0;
-    }
-
-    /* PARTICIPATION */
-    .participation{ margin-top: 600px; }
-    
-    .participation h3{
-        padding: 340px 20px 20px 40px;
-        max-width: 94px;
-        position: absolute;
-        left: 0;
-        margin-top: -460px;
-        right: 0;
-        margin-left: 0px;  
-    }
-    
-    .participation h3::before{
-        display: block;
-        width: 940px;
-        height: 520px;
-        transform: scale(0.7, 0.7);
-        position: absolute;
-        margin-left: -140px;
-        margin-top: 0;
-        margin-top: -460px;
-    }
-
-    .participation p{ max-width: 360px; }
-    
-    .participation p:last-child{ 
-        float: none;
-        margin-top: 0px;
-    }
-    
-    .participation::before{
-        max-width: 300px;
-        right: 2%;
-        left: auto;
-        margin: 0 auto;
-        margin-top: 290px;
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
-
-    .participation::after{
-        transform: scale(1.4, 1.4);
-        left: auto;
-        right: 8%;
-        margin: 0 auto;
-        margin-left: 0px;
-        margin-top: -450px;
-        z-index: -1002;
-    }
-    
-    .benefits h3::before{ display: none; }
-    
-    /* BENEFITS */
-    .benefits{ margin-top: 600px; }
-    
-    .benefits p{
-        max-width: 300px;
-        margin-top: 170px;
-        float: right;
-    }
-    
-    .benefits h3{ 
-        padding: 330px 50px 20px 400px;
-        position: absolute;
-        left: auto;
-        margin-left: -350px;
-        margin-top: -330px;
-        right: 0;
-    }
-    
-    .benefits::before{
-        width: 460px;
-        height: 400px;
-        transform: scale(0.8, 0.8);
-        margin-top: -550px;
-        left: 0;
-    }
-
-    .benefits::after{
-        width: 460px;
-        height: 655px;
-        transform: scale(0.8, 0.8);
-        margin-top: -240px;
-        left: 0;
-    }
-    
-    /* REQUIREMENTS */
-    #zen-requirements{
-        margin-top: 1170px;
-        margin-bottom: 0px;
-    }
-
-    .requirements h3{
-        font-size: 120px;
-        line-height: 110px;
-        padding-bottom: 200px;
-        max-width: 450px;
-        margin-top: -700px;
-        padding-right: -70px;
-    }
-    
-    .requirements h3::before{
-        width: 460px;
-        left: 0%;
-        margin-top: 200px;
-        margin-left: 10px;
-        transform: scale(0.85, 0.85);
-    }
-
-    .requirements h3::after{
-        width: 300px;
-        left: 0%;
-        margin-top: -20px;
-        margin-left: 430px;
-        transform: scale(0.85, 0.85);
-    } 
-    
-    .requirements p{
-        max-width: 100%;
-        display: block;
-        position: static;
-        margin-left: 0;
-    }    
-
-    .requirements p:nth-child(2){
-        margin-left: 0;
-        max-width: 100%;
-    }
-
-    .requirements p:nth-child(3){ margin-top: auto;}
-
-    .requirements::before{ display: none; }
-
-    .requirements::after{ display: none; }
-    
-    /* ARCHIVES - VIEW ALL DESIGNS */
-    .design-archives{ margin-top: -190px; }
-
-    .design-archives .viewall::after{ padding-top: 660px; }
-
-    .design-archives .viewall{
-        font-size: 50px;
-        padding-top: 20px;
-    }
-    
-    .design-archives .next a{ 
-        margin-top: 80px;
-        font-size: 25px;
-    }
-    
-    .design-archives .viewall::after{ padding-top: 500px; }
-    
-    /* SELECT A DESIGN */
-    #design-selection{ margin-top: 250px;}
-
-    #design-selection nav li{
-        float: left;
-        width: 165px;
-        height: 165px;
-        right: auto;
-        margin-left: 20px;
-        margin-right: -15px;
-        margin-bottom: 5px;
-    }
-
-    #design-selection nav li a{
-        color: black;
-        line-height: 20px;
-        display: block;
-    }
-
-    #design-selection nav li a:first-child{ margin-bottom: 30px; }
-
-    #design-selection nav ul li .design-name{ margin-top: 40px; }
-    
-    /* BY DAVID SHEA */
-    .requirements p:nth-child(6){
-        font-size: 25px;
-        margin-top: 700px;
-        margin-bottom: 200px;
-    }
-
-    .requirements p:last-child a{ 
-        text-transform: inherit;
-        font-style: normal;
-    }
-    
-    /* FOOTER */
-    footer{ margin-top: 1030px; }
-    
-    footer a{ 
-        padding-right: 0px;
-        color: white; }
-
-    footer a:last-child{ padding-right: 0px; }
-    
-    .zen-validate-html::before{ 
-        margin-left: -220px;
-        left: 50%;
-        transform: scale(0.6, 0.6);
-    }
-
-    .zen-validate-css::before{ 
-        margin-left: -140px;
-        left: 50%;
-        transform: scale(0.6, 0.6);
-    }
-
-    .zen-license::before{ 
-        margin-left: -60px;
-        left: 50%;
-        transform: scale(0.6, 0.6);
-    }
-
-    .zen-accessibility::before{ 
-        margin-left: 20px;
-        left: 50%;
-        transform: scale(0.6, 0.6);
-    }
-
-    .zen-github::before{ 
-        margin-left: 100px;
-        left: 50%;
-        transform: scale(0.6, 0.6);
+@media only screen and (max-width: 1312px){
+    /* ABOUT - social media links*/
+    #social{
+        margin-left: 420px;
+        padding-bottom: 40px;
     }
 }
 
+/**
+*IMAGE SCROLL ADJUSTMENTS
+**/
+@media only screen and (max-width: 1300px){
+    .horiz-scroll .scroller .scroll-images img { width: 30.65%; }
+    
+    .horiz-scroll .scroller{ max-height: 33vw; }
+    
+    /* adjusting the horizontal images in the landscape and portrait section */
+    #image-3{ width: 66.9%; }
+    #image-4{ width: 66.9%; }
+    #image-5{ width: 66.9%; }
+    #image-10{ width: 66.9%; }
+    #image-13{ width: 66.9%; }
+    #portrait-3{ width: 67.55%; }
+}
+
+/**
+*IMAGE SCROLL ADJUSTMENTS
+**/
+@media only screen and (max-width: 1200px){
+    .horiz-scroll .scroller .scroll-images img { width: 35%; }
+    
+    .horiz-scroll .scroller{ max-height: 48vw; }
+    
+    /* adjusting the horizontal images in the landscape and portrait section */
+    #image-3{ width: 76.3%; }
+    #image-4{ width: 76.3%; }
+    #image-5{ width: 76.3%; }
+    #image-10{ width: 76.3%; }
+    #image-13{ width: 76.3%; }
+    #portrait-3{ width: 77.2%; }
+}
+
+
+/**
+*IMAGE SCROLL ADJUSTMENTS
+**/
+@media only screen and (max-width: 1100px){
+    .horiz-scroll .scroller .scroll-images img { width: 38.65%; }
+    
+    /* adjusting the horizontal images in the landscape and portrait section */
+    #image-3{ width: 84.3%; }
+    #image-4{ width: 84.3%; }
+    #image-5{ width: 84.3%; }
+    #image-10{ width: 84.3%; }
+    #image-13{ width: 84.3%; }
+    #portrait-3{ width: 85.2%; }
+}
+
+
+/**
+*SOCIAL BUTTON ADJUSTMENTS
+**/
+@media only screen and (max-width: 1001px){
+    #social li:last-child{
+        padding-top: 10px;
+        padding-bottom: 30px;
+    }
+    
+    #social li:nth-child(2){ border-right: none; }
+}
+
+/**
+*IMAGE SCROLL ADJUSTMENTS
+**/
+@media only screen and (max-width: 950px){
+    .horiz-scroll .scroller .scroll-images img { width: 42%; }
+    
+    /* adjusting the horizontal images in the landscape and portrait section */
+    #image-3{ width: 91.6%; }
+    #image-4{ width: 91.6%; }
+    #image-5{ width: 91.6%; }
+    #image-10{ width: 91.6%; }
+    #image-13{ width: 91.6%; }
+    #portrait-3{ width: 92.6%; }
+}
 
 /**
 *MOBILE LAYOUT
 **/
-@media only screen and (max-width: 754px){
-    h1{
-        font-size: 70px; 
-        line-height: 72px;
-        padding: 90px 160px 20px 10px;
-        margin-top: 170px;
-    }
-    
+@media only screen and (max-width: 900px){ 
+    /* ABOUT */
     h3{ 
-        font-size: 40px;
-        line-height: normal;
+        line-height: 64px;
+        font-size: 70px; 
     }
     
-    /* HOME PAGE */
-    #zen-intro h2{
-        font-size: 19px;
-        max-width: 100px;
-        margin-top: 0;
-        float: left;
-        margin-top: -310px;
-        margin-left: 20px;
+    #about-bre p{
+        font-size: 15px;
+        line-height: 19px;
     }
-    
-    h1::before{ top: -15px; }
-
-    /* ROAD TO ENLIGHTENMENT */
-    #zen-preamble::before{ top: 140px; }
-    
-    /* SO WHAT IS THIS ABOUT */
-    .explanation{ 
-        margin: none;
-        margin-top: 580px;
-    }
-
-    .explanation p{ 
-        max-width: 100%;
-        float: none;
-        display: block;
-        margin: 0 auto;
-    }
-
-    #zen-explanation::after{
-        transform: scale(0.54, 0.54);
-        margin: 0 auto;
-        left: auto;
-        right: auto;
-        margin-top: -1030px;
-        margin-left: -180px;
-    }
-    
-    .explanation h3{
-        margin: 0 inherit;
-        max-width: inherit;
-        right: auto;
-        left: auto;
-        position: relative;
-        padding: 320px 50px 20px 20px;
-        margin-top: -570px;
-        margin-left: 60px;
-        right: 0;
-        float: left;
-        display: inline-block;
-    } 
-    
-    .explanation{ margin-top: 540px;}
-
-    #zen-explanation::after{ margin-top: -870px; }
-    
-    .explanation h3{ margin-top: -540px; } 
-    
-    /* PARTICIPATION */
-    .participation{ margin-top: 550px; }
-    
-    .participation h3{
-        padding: 340px 20px 20px 40px;
-        max-width: 94px;
-        position: absolute;
-        left: 0;
-        margin-top: -460px;
-        right: 0;
-        margin-left: 0px;  
-    }
-    
-    .participation h3::before{
-        display: block;
-        width: 940px;
-        height: 520px;
-        transform: scale(0.5, 0.5);
-        position: absolute;
-        margin-left: -230px;
-        margin-top: 0;
-        margin-top: -430px;
-    }
-
-    .participation p{ max-width: 100%; }
-    
-    .participation::before{
-        max-width: 150px;
-        font-size: 16px;
-        right: 70%;
-        left: auto;
-        margin: 0 auto;
-        margin-top: 360px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
-
-    .participation::after{
-        transform: none;
-        left: auto;
-        right: 8%;
-        margin: 0 auto;
-        margin-left: 0px;
-        margin-top: 15px;
-    }
-    
-    /* BENEFITS */
-    .benefits{ margin-top: 800px; }
-    
-    .benefits p{
-        max-width: 100%;
-        margin-top: 0px;
-        float: none;
-    }
-    
-    .benefits h3{ 
-        padding: 260px 50px 20px 300px;
-        position: absolute;
-        left: auto;
-        margin-left: -350px;
-        margin-top: -420px;
-        right: 0;
-    }
-    
-    .benefits::before{
-        width: 460px;
-        height: 400px;
-        transform: scale(0.5, 0.5);
-        margin-top: -610px;
-        left: 0;
-        right: auto;
-        margin-left: 140px;
-    }
-
-    .benefits::after{
-        width: 460px;
-        height: 655px;
-        transform: scale(0.5, 0.5);
-        margin-top: -795px;
-        left: 0;
-        right: auto;
-        margin-left: -100px;
-    }
-    
-    /* REQUIREMENTS */
-    #zen-requirements{
-        margin-top: -80px;
-    }
-
-    .requirements h3{
-        font-size: 70px;
-        line-height: 72px;
-        max-width: 220px;
-        margin-top: -520px;
-    }
-    
-    .requirements h3::before{
-        width: 460px;
-        left: 0%;
-        margin-top: 80px;
-        margin-left: -70px;
-        transform: scale(0.65, 0.65);
-    }
-
-    .requirements h3::after{
-        width: 300px;
-        left: 0%;
-        margin-top: -64px;
-        margin-left: 270px;
-        transform: scale(0.65, 0.65);
-    } 
-    
-    .requirements p{
-        max-width: 100%;
-        display: block;
-        position: static;
-        margin-left: 0;
-    }    
-
-    .requirements::before{
-        margin-top: 600px;
-        margin-left: 130px;
-        left: 0%;
-    }
-
-    .requirements::after{
-        margin-top: 100px;
-        left: 0%;
-        margin-left: 50px;
-    }
-    
-    .requirements::before{ display: none; }
-
-    .requirements::after{ display: none; }
-    
-    /* ARCHIVES - VIEW ALL DESIGNS */
-    .design-archives .viewall::after{ padding-top: 560px; }
-
-    .design-archives{ margin-top: -130px; }
-    
-    .design-archives .viewall{
-        font-size: 40px;
-        padding-top: 15px;
-    }
-    
-    .design-archives .next a{ 
-        margin-top: 60px;
-        font-size: 19px;
-    }
-    
-    .design-archives .viewall::after{ display: none; }
-
-     /* SELECT A DESIGN */
-    #design-selection{ margin-top: 150px;}
-
-    
-    /* BY DAVID SHEA */
-    .requirements p:nth-child(6){
-        font-size: 19px;
-        margin-top: 700px;
-        padding-top: 50px;
-        padding-bottom: 50px;
-        line-height: 21px;
-    }
-
-   /* FOOTER */
-    footer{ margin-top: 910px; }
 }
 
-
+/**
+*IMAGE SCROLL ADJUSTMENTS
+**/
+@media only screen and (max-width: 850px){
+    .horiz-scroll .scroller .scroll-images img { width: 46%; }
+    
+    /* adjusting the horizontal images in the landscape and portrait section */
+    #image-3{ width: 100.2%; }
+    #image-4{ width: 100.2%; }
+    #image-5{ width: 100.2%; }
+    #image-10{ width: 100.2%; }
+    #image-13{ width: 100.2%; }
+    #portrait-3{ width: 101.4%; }
+}
 
 
 /**
 *MOBILE MOBILE LAYOUT
 **/
-@media only screen and (max-width: 565px){
+@media only screen and (max-width: 780px){
+    /* BASIC */
     h1{
-        font-size: 70px; 
-        line-height: 72px;
-        padding: 90px 160px 20px 10px;
-        margin-top: 170px;
-    }
-    
-    h3{ 
         font-size: 40px;
-        line-height: normal;
+        line-height: 45px;
     }
     
-    /* HOME PAGE */
-    #zen-intro h2{
-        font-size: 19px;
-        max-width: 100px;
-        margin-top: 0;
-        float: left;
-        margin-top: -310px;
-        margin-left: 20px;
+    /* White box around the nav */
+    #site-nav::before{
+        content: '';
+        position: fixed;
+        height: 45px;
+        width: 50px;
+        background-color: rgba(255,255,255,0.80);
+        top: 28px;
+        right: 22px;
     }
     
-    h1::before{ top: -15px; }
-
-    /* ROAD TO ENLIGHTENMENT */
-    #zen-preamble::before{ top: 140px; }
-    
-    /* SO WHAT IS THIS ABOUT */ 
-    .explanation{ 
-        margin: none;
-        margin-top: 580px;
-    }
-
-    .explanation p{ 
-        max-width: 100%;
+    /* ABOUT */
+    #profile-photo{
         float: none;
-        display: block;
-        margin: 0 auto;
-    }
-
-    #zen-explanation::after{
-        transform: scale(0.54, 0.54);
-        margin: 0 auto;
-        left: auto;
-        right: auto;
-        margin-top: -1030px;
-        margin-left: -180px;
-    }
-    
-    .explanation h3{
-        margin: 0 inherit;
-        max-width: inherit;
-        right: auto;
-        left: auto;
-        position: relative;
-        padding: 320px 50px 20px 20px;
-        margin-top: -570px;
-        margin-left: 60px;
+        margin-right: 0;
+        max-height: 100%;
+        width: 100%;
+        height: 100%;
         right: 0;
-        float: left;
-        display: inline-block;
+        left: 0;
     }
     
-    /* PARTICIPATION */
-    .participation{ margin-top: 400px; }
-    
-    .participation p{ 
-        align-content: center;
-        max-width: 380px; }
-    
-    .participation h3{
-        padding: 260px 20px 20px 10px;
-        margin-top: -360px;
-        right: 0;
-        margin-left: 0px;  
-    }
-    
-    .participation h3::before{
-        transform: scale(0.37, 0.37);
-        margin-left: -290px;
-        margin-top: -380px;
-    }
-    
-    .participation::before{
-        max-width: 300px;
-        right: 11%;
-        left: auto;
-        margin-top: 500px;
+    #about-bre{
+        padding-right: 10px;
+        padding-left: 10px;
         padding-top: 20px;
-        padding-bottom: 20px;
-    }
-
-    .participation::after{
-        transform: scale(1.3, 1.3);
-        left: auto;
-        right: 20%;
-        margin-left: 0px;
-        margin-top: 180px;
     }
     
-    /* BENEFITS */
-    .benefits{ 
-        margin-bottom: 0;
-        margin-top: 1100px; }
-    
-    .benefits h3{ 
-        padding: 260px 50px 20px 300px;
-        position: absolute;
-        left: auto;
-        margin-left: -350px;
-        margin-top: -420px;
+    /* social media links */
+    #social{
+        padding-left: 0px;
+        margin-left: 10px;
+        max-width: 350px;
+        padding-top: 0px;
         right: 0;
+        left: 0;
     }
     
-    .benefits::before{
-        width: 460px;
-        height: 400px;
-        transform: scale(0.5, 0.5);
-        margin-top: -810px;
-        left: auto;
-        right: 0;
-        margin-left: 0;
-    }
-
-    .benefits::after{
-        width: 460px;
-        height: 655px;
-        transform: scale(0.5, 0.5);
-        margin-top: -845px;
-        left: auto;
-        right: 0;
-        margin-left: 0px;
-        margin-bottom: 0;
-    }
-    
-    /* REQUIREMENTS */
-    #zen-requirements{ margin-top: 500px; }
-
-    .requirements h3{
-        font-size: 70px;
-        line-height: 72px;
-        max-width: 220px;
-        margin-top: -460px;
-        padding-bottom: 130px;
-    }
-    
-    .requirements h3::before{
-        width: 460px;
-        margin-top: 50px;
-        margin-left: -110px;
-        transform: scale(0.48, 0.48);
-    }
-
-    .requirements h3::after{
-        width: 300px;
-        left: 0%;
-        margin-top: -94px;
-        margin-left: 160px;
-        transform: scale(0.48, 0.48);
-    }
-
-    .requirements::before{
-        margin-top: 770px;
-        margin-left: 40px;
-        left: 0%;
-        right: auto;
-        transform: scale(0.75, 0.75);
-    }
-
-    .requirements::after{
-        margin-top: 210px;
-        left: 0%;
-        margin-left: 20px;
-    }
-    
-    /* ARCHIVES - VIEW ALL DESIGNS */
-    .design-archives{ margin-top: -150px; }
-    
-    .design-archives .viewall{
-        font-size: 40px;
-        padding-top: 5px;
-        max-width: 400px;
-    }
-    
-    /* SELECT A DESIGN */
-    .design-archives .next a{ 
-        margin-top: 90px;
-        font-size: 19px;
-    }
-    
-    /* BY DAVID SHEA */
-    .requirements p:nth-child(6){ margin-top: 900px; }
-
     /* FOOTER */
-    footer{ margin-top: 1090px; }
+    .footer{ display: inherit; }
     
-    .zen-validate-html::before{ 
-        margin-left: -180px;
-        left: 50%;
-        transform: scale(0.56, 0.56);
+    /* LANDSCAPE AND PORTRAIT */ 
+    .horiz-scroll{
+        display: initial;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: initial;
+        flex-direction: initial;
+        overflow: visible;
+        position: static;
+        max-height: none;
     }
 
-    .zen-validate-css::before{ 
-        margin-left: -110px;
-        left: 50%;
-        transform: scale(0.56, 0.56);
+    .horiz-scroll .scroller{
+        max-height: none;
+        position: static;
+        display: initial;
+        -webkit-box-flex: 0;
+        -ms-flex: none;
+        flex: none;
+        background-color: white;
     }
 
-    .zen-license::before{ 
-        margin-left: -40px;
-        left: 50%;
-        transform: scale(0.56, 0.56);
+    .horiz-scroll .scroller .left-scroll{ left: auto; }
+
+    .horiz-scroll .scroller .right-scroll{ right: auto; }
+
+    .horiz-scroll .scroller .left-scroll, .horiz-scroll .scroller .right-scroll{
+        display: initial;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: initial;
+        flex-direction: initial;
+        padding: 0;
+        overflow-x: hidden;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        position: static;
     }
 
-    .zen-accessibility::before{ 
-        margin-left: 30px;
-        left: 50%;
-        transform: scale(0.56, 0.56);
+    .horiz-scroll .scroller .left-scroll p, .horiz-scroll .scroller .right-scroll p{ display: none; }
+
+    .horiz-scroll .scroller .scrollable-x{
+        white-space: normal;
+        overflow-x: initial;
+        overflow-y: initial;
     }
 
-    .zen-github::before{ 
-        margin-left: 110px;
-        left: 50%;
-        transform: scale(0.56, 0.56);
+    .horiz-scroll .scroller .scroll-images{
+        position: static;
+        -webkit-box-flex: 0;
+        -ms-flex: none;
+        flex: none;
+        -webkit-box-ordinal-group: initial;
+        -ms-flex-order: initial;
+        order: initial;
+        overflow-y: initial;
+        margin-top: auto;
+        margin-bottom: auto;
+        text-align: initial;
+    }
+
+    .horiz-scroll .scroller .scroll-images img{
+        width: auto;
+        top: auto; 
+        -webkit-transition: none; 
+        transition: none;
+        position: static;
+        float: none;
+        margin-right: 0;
+        max-height: 100%;
+        width: 100%;
+        height: 100%;
+        right: 0;
+        left: 0;
+    }
+
+    /* adjusting the horizontal images in the landscape and portrait section */
+    #image-3, #image-4, #image-5, #image-10, #image-13, #portrait-3{ 
+        width: initial; 
+        float: none;
+        margin-right: 0;
+        max-height: 100%;
+        width: 100%;
+        height: 100%;
+        right: 0;
+        left: 0;
+    }
+
+    .horiz-scroll .scroller .scroll-images img.focused{ display: none; }
+
+    .invisible{ display: none; }
+    
+    /* HAMBURGER NAV */
+    #site-nav{
+        position: fixed;
+        top: 0;
+        right: 0;
+        margin-top: 0;
+        float: none;
     }
     
+    /* hide nav links */
+    #site-nav ul{ display: none; }
     
-} 
-
-
-
-
-
-
-
-
+    /* reveal the "show menu" button */
+    #site-nav #show-menu-button{
+        display: block;
+        border-top: 4px solid black;
+        border-bottom: 4px solid black;
+    }
     
+    /* add the middle hamburger line */
+    #site-nav #show-menu-button::before{
+        content: '';
+        display: block;
+        border-top: solid 4px black;
+        width: 35px;
+        margin-top: 9px;
+    }
     
+    /* hide/show menu buttons */
+    #site-nav > a{
+        position: absolute;
+        top: 35px;
+        right: 30px;
+        width: 35px;
+        height: 30px;
+        overflow: hidden;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    #site-nav > a span{ display: none; }
     
+    /* when mobile menu is visible */
+    #site-nav:target{
+        background-color: rgba(255,255,255,0.95);
+        left: 0;
+        bottom: 0;
+    } 
+    
+    /* reveal the nav links */
+    #site-nav:target ul{
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        width: 80%;
+        
+        -webkit-animation-name: fade-in;
+        animation-name: fade-in;
+        -webkit-animation-duration: 1.5s;
+        animation-duration: 1.5s;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+    } 
+    
+    /* make the revealed nav vertical again */
+    #site-nav:target li{
+        float: none;
+        margin: 0;
+        text-align: center;
+        border-bottom: 2px solid black;
+        
+        -webkit-animation-name: slide-in;
+        animation-name: slide-in;
+        -webkit-animation-duration: 0.333s;
+        animation-duration: 0.333s;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+        -webkit-animation-fill-mode: backwards;
+        animation-fill-mode: backwards;
+    } 
+    
+    #site-nav:target li:nth-child(2){ -webkit-animation-delay: 0.333s; animation-delay: 0.333s; }
+    
+    #site-nav:target li:last-child{ 
+        -webkit-animation-delay: 0.666s; 
+        animation-delay: 0.666s;
+        border-bottom: none;
+    }
+    
+    #site-nav:target ul a{
+        display: block;
+        font-size: 180%;
+        line-height: 2.5;
+    } 
+    
+    /* hide the "show menu" button */
+    #site-nav:target #show-menu-button{ -webkit-animation: show-menu-icon 0.5s 1 both; animation: show-menu-icon 0.5s 1 both; } 
+    
+    /* reveal the "hide menu" button */
+    #site-nav:target #hide-menu-button{ display: block; }
+    
+    #site-nav:target #hide-menu-button::before,
+    #site-nav:target #hide-menu-button::after{
+        content: '';
+        display: block;
+        border-top: solid 4px black;
+        width: 35px;
+        position: absolute;
+        top: 11px;
+        -webkit-transform: rotate(41deg);
+        transform: rotate(41deg);
+        
+        -webkit-animation: hide-menu-icon-before 1s 1 both;
+        animation: hide-menu-icon-before 1s 1 both;
+    } 
+    
+    /* rotate one line the other way */
+    #site-nav:target #hide-menu-button::after{
+        -webkit-transform: rotate(-41deg);
+        transform: rotate(-41deg);
+        -webkit-animation: hide-menu-icon-after 1s 1 both;
+        animation: hide-menu-icon-after 1s 1 both;
+    }
+}
+
+
+/* ANIMATION */
+@-webkit-keyframes fade-in{
+    0%{ opacity: 0; }
+    100%{ opacity: 0.95;}
+}
+@keyframes fade-in{
+    0%{ opacity: 0; }
+    100%{ opacity: 0.95;}
+}
+
+@-webkit-keyframes slide-in{
+    from{ -webkit-transform: translate(200%,0); transform: translate(200%,0); }
+}
+
+@keyframes slide-in{
+    from{ -webkit-transform: translate(200%,0); transform: translate(200%,0); }
+}
+
+@-webkit-keyframes show-menu-icon{
+    0%{ -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+    50%{ 
+        -webkit-transform: rotate(180deg); 
+        transform: rotate(180deg);
+        height: 26px;
+        top: 10px;
+    }
+    100%{ 
+        -webkit-transform: rotate(180deg); 
+        transform: rotate(180deg);
+        height: 4px;
+        top: 22px;
+    }
+}
+
+@keyframes show-menu-icon{
+    0%{ -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+    50%{ 
+        -webkit-transform: rotate(180deg); 
+        transform: rotate(180deg);
+        height: 30px;
+        top: 35px;
+    }
+    99%{ 
+        -webkit-transform: rotate(180deg); 
+        transform: rotate(180deg);
+        height: 0px;
+        top: 45px;
+    }
+    100%{ top: -100px; }
+}
+
+@-webkit-keyframes hide-menu-icon-before{
+    49%{
+        top: -100px;
+    }
+    50%{
+        top:11px;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(41deg);
+        transform: rotate(41deg);
+    }
+}
+
+@keyframes hide-menu-icon-before{
+    49%{
+        top: -100px;
+    }
+    50%{
+        top:11px;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(41deg);
+        transform: rotate(41deg);
+    }
+}
+@-webkit-keyframes hide-menu-icon-after{
+    49%{
+        top: -100px;
+    }
+    50%{
+        top:11px;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(-41deg);
+        transform: rotate(-41deg);
+    }
+}
+@keyframes hide-menu-icon-after{
+    49%{
+        top: -100px;
+    }
+    50%{
+        top:11px;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(-41deg);
+        transform: rotate(-41deg);
+    }
+}
+
+
+
+
+
