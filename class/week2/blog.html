@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Blog</title>
+  <title>Blog - Kianna</title>
 
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -23,35 +23,22 @@
     }
 
     .height2 {
-      height: 699px;
-    }
-
-    .green {
-      background-color: #5b5941;
-    }
-
-    .blue {
-      background-color: #87b6a7;
-    }
-
-    .orange {
-      background-color: #f7d08a;
+      height: 600px;
     }
   </style>
-
 </head>
 
 <body>
   <div class="container">
     <div class="row">
-      <div class="col-md-3 height2 orange">
+      <div class="col-md-3 height2 randomColor">
       </div>
-      <div class="col-md-9 height2 blue">
+      <div class="col-md-9 height2 randomColor">
       </div>
     </div>
 
     <div class="row">
-      <div class="col-md-12 height1 green">
+      <div class="col-md-12 height1 randomColor">
       </div>
     </div>
   </div>
@@ -60,6 +47,23 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    //when the document is loaded
+    $(document).ready(function() {
+      //this function gets a random color between between 0 and 255
+      function getRandomColor() {
+        return Math.floor(Math.random() * 255);
+      }
+      //get all the elements (divs) with the class .randomColor
+      var randomColor = $(".randomColor");
+      //loop through all elements
+      //for each element, change the css backgorund color to RGB + three random colors
+      $.each(randomColor, function(index, item) {
+        $(this).css("background-color", "RGB(" + getRandomColor() + "," + getRandomColor() + "," + getRandomColor() + ")");
+      })
+
+    })
+  </script>
 </body>
 
 </html>
