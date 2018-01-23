@@ -20,11 +20,26 @@
 
   <style media="screen">
     .height1 {
-      height: 70px;
+      height: 90px;
     }
 
     .height2 {
-      height: 467px;
+      height: 370px;
+    }
+
+    .makefitimage {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* centers the child elements */
+    .textaligncenter{
+      text-align: center;
+    }
+
+    .margincenter{
+      display: block;
+      margin: 0 auto;
     }
   </style>
 </head>
@@ -32,34 +47,50 @@
 <body>
   <div class="container">
     <div class="row">
-      <div class="col-md-12 height1 randomColor">
+      <div class="col-md-12 height1">
+        <p class="text-primary">Our portfolio page example.</p>
+        <p class="text-success">We use this colour for success.</p>
+        <p class="text-danger">We use this colour for danger.</p>
       </div>
     </div>
 
     <div class="row">
-      <div class="col-md-12 height2 randomColor">
+      <div class="col-md-12 height2">
+        <p class="bg-primary">Primary background</p>
+        <p class="bg-success">Success background</p>
+        <p class="bg-info">Information background.</p>
+        <p class="bg-warning">Warning background</p>
+        <p class="bg-danger">Danger background</p>
       </div>
     </div>
 
     <div class="row">
-      <div class="col-md-3 height1 randomColor">
+      <div class="col-md-3 height1">
+        <img class="makefitimage" src="img/food1.png" alt="A bag of fries.">
       </div>
-      <div class="col-md-3 height1 randomColor">
+      <div class="col-md-3 height1">
+        <img class="makefitimage" src="img/food2.jpg" alt="A box of crackers.">
       </div>
-      <div class="col-md-3 height1 randomColor">
+      <div class="col-md-3 height1">
+        <img class="makefitimage" src="img/food3.png" alt="A box of doughnuts.">
       </div>
-      <div class="col-md-3 height1 randomColor">
+      <div class="col-md-3 height1">
+        <img class="makefitimage" src="img/food4.jpg" alt="Boxes of candy.">
       </div>
     </div>
 
     <div class="row">
-      <div class="col-md-3 height1 randomColor">
+      <div class="col-md-3 height1 textaligncenter">
+        <img class="makefitimage" src="img/food5.jpg" alt="Bag of food.">
       </div>
-      <div class="col-md-3 height1 randomColor">
+      <div class="col-md-3 height1">
+        <img class="margincenter" src="img/food6.jpg" alt="Tomatoes.">
       </div>
-      <div class="col-md-3 height1 randomColor">
+      <div class="col-md-3 height1">
+        <img class="margincenter" src="img/food7.jpg" alt="Smarties chocolate candy.">
       </div>
-      <div class="col-md-3 height1 randomColor">
+      <div class="col-md-3 height1">
+        <img class="margincenter" src="img/dog1.jpg" alt="Dog.">
       </div>
     </div>
 
