@@ -1,11 +1,43 @@
 @import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,600,600i,700|Julius+Sans+One');
-
 /* Eric Meyer CSS Reset begins*/
-a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,main{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {
+  display: block
+}
+
+body {
+  line-height: 1
+}
+
+ol, ul {
+  list-style: none
+}
+
+blockquote, q {
+  quotes: none
+}
+
+blockquote:after, blockquote:before, q:after, q:before {
+  content: '';
+  content: none
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
 /* Eric Meyer CSS Reset ends */
 
-
-body{
+body {
   font-size: 20px;
   font-family: 'Crimson Text', serif;
   display: block;
@@ -13,7 +45,7 @@ body{
   line-height: 23px;
 }
 
-h1{
+h1 {
   font-size: 100px;
   font-family: 'Crimson Text', serif;
   line-height: 100px;
@@ -28,7 +60,7 @@ h1{
   border-bottom: 8px solid black;
 }
 
-h2{
+h2 {
   font-size: 25px;
   font-family: 'Crimson Text', serif;
   margin-left: 40px;
@@ -36,29 +68,29 @@ h2{
   margin-bottom: 80px;
 }
 
-h3{
+h3 {
   top: 30px;
   position: absolute;
   left: 290px;
 }
 
-p{
+p {
   margin-bottom: 30px;
 }
 
-.mainDiv{
+.mainDiv {
   margin-right: 240px;
   margin-left: 245px;
 }
 
-.image1{
+.image1 {
   width: 50%;
   height: 50%;
   margin-top: 20px;
   margin-bottom: 100px;
 }
 
-.quote1{
+.quote1 {
   font-size: 40px;
   line-height: 50px;
   max-width: 500px;
@@ -69,33 +101,35 @@ p{
   margin-left: 200px;
 }
 
-ul{
-  border-left: 8px solid black;
-  padding-left: 15px;
-  margin-left: 60px;
+ul {
+  margin-left: 90px;
 }
 
-.image2{
+li {
+  list-style-type: disc;
+}
+
+.image2 {
   width: 45%;
   height: 45%;
   padding-left: 20px;
 }
 
-.text2{
+.text2 {
   max-width: 400px;
   padding-top: 20px;
 }
 
-.image3{
+.image3 {
   height: 85%;
   width: 85%;
 }
 
-.text3{
+.text3 {
   font-size: 40px;
   line-height: 50px;
   max-width: 550px;
   text-align: right;
-  margin-top: -120px;
+  margin-top: -170px;
   margin-left: 250px;
 }
