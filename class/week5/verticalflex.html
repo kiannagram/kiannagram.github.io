@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vertical Flex | Kianna</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <style media="screen">
+    .height1 {
+      height: 70px;
+    }
+
+    .height2 {
+      height: 600px;
+    }
+
+    .height3 {
+      height: 150px;
+    }
+
+    .height4{
+      height: 300px;
+    }
+
+    .flexSingle{ /* center the child element(s) */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .flexSpaceAround{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .header{
+      line-height: 70px;
+    }
+
+    .flexVertSpaceAround{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .footer{
+      line-height: 70px;
+    }
+
+    ul li{
+      list-style: none;
+      text-transform: uppercase;
+    }
+
+    ul li a{
+      text-decoration: none;
+      color: black;
+      font-size: 20px;
+    }
+
+    ul li a:hover{
+      text-decoration: none;
+      color: black;
+      font-weight: 700;
+    }
+
+    h1{
+      font-size: 70px;
+      font-weight: 600;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 height1 header">
+        <ul class="flexSpaceAround">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4 height2 flexVertSpaceAround">
+        <img src="images/surfing1.jpg" alt="apple">
+        <img src="images/surfing3.jpg" alt="apple">
+        <img src="images/surfing4.jpg" alt="apple">
+      </div>
+      <div class="col-md-8 height2">
+        <div class="row">
+          <div class="col-md-12 height4 flexSingle">
+            <h1>the official surf website.</h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 height3">
+            <h2>HISTORY</h2>
+            <p>Nulla dignissim elementum purus sit amet facilisis. Duis sed nunc sed odio cursus rhoncus nec vel dolor. Vivamus non accumsan ex. Donec accumsan eget velit vel mattis. Suspendisse ac leo eu diam gravida fringilla.</p>
+          </div>
+          <div class="col-md-6 height3">
+            <h2>LESSONS</h2>
+            <p>Aliquam varius sed est sed consequat. Sed in ligula at libero vulputate luctus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 height3">
+            <p><strong>LEARN MORE</strong></p>
+          </div>
+          <div class="col-md-6 height3">
+            <p>Sed in ligula at libero vulputate luctus. Nulla blandit at justo non feugiat. Nulla auctor metus ut nunc sollicitudin, ac cursus erat fringilla.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 height1 footer">
+        <div> The Surf Website, Copyright, 2018</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    //when the document is loaded
+    $(document).ready(function() {
+      //this function gets a random color between between 0 and 255
+      function getRandomColor() {
+        return Math.floor(Math.random() * 255);
+      }
+      //get all the elements (divs) with the class .randomColor
+      var randomColor = $(".randomColor");
+      //loop through all elements
+      //for each element, change the css backgorund color to RGB + three random colors
+      $.each(randomColor, function(index, item) {
+        $(this).css("background-color", "RGB(" + getRandomColor() + "," + getRandomColor() + "," + getRandomColor() + ")");
+      })
+
+    })
+  </script>
+</body>
+
+</html>
