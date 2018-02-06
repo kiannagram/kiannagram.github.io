@@ -31,59 +31,65 @@
       height: 150px;
     }
 
-    .height4{
+    .height4 {
       height: 300px;
     }
 
-    .flexSingle{ /* center the child element(s) */
+    .flexSingle {
+      /* center the child element(s) */
       display: flex;
       justify-content: center;
       align-items: center;
+      text-align: center;
     }
 
-    .flexSpaceAround{
+    .flexSpaceAround {
       display: flex;
       justify-content: space-around;
       align-items: center;
     }
 
-    .header{
+    .header {
       line-height: 70px;
     }
 
-    .flexVertSpaceAround{
+    .flexVertSpaceAround {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
     }
 
-    .footer{
+    .footer {
       line-height: 70px;
     }
 
-    ul li{
+    .border {
+      border: 3px solid black;
+    }
+
+    ul li {
       list-style: none;
       text-transform: uppercase;
     }
 
-    ul li a{
+    ul li a {
       text-decoration: none;
       color: black;
       font-size: 20px;
     }
 
-    ul li a:hover{
+    ul li a:hover {
       text-decoration: none;
       color: black;
       font-weight: 700;
     }
 
-    h1{
-      font-size: 70px;
+    h1 {
+      font-size: 68px;
       font-weight: 600;
+      line-height: 64px;
     }
-
   </style>
 </head>
 
@@ -106,9 +112,12 @@
         <img src="images/surfing3.jpg" alt="apple">
         <img src="images/surfing4.jpg" alt="apple">
       </div>
+
       <div class="col-md-8 height2">
         <div class="row">
-          <div class="col-md-12 height4 flexSingle">
+          <div class="col-md-12 height3">
+          </div>
+          <div class="col-md-12 height3">
             <h1>the official surf website.</h1>
           </div>
         </div>
@@ -130,13 +139,14 @@
           </div>
           <div class="col-md-6 height3">
             <p>Sed in ligula at libero vulputate luctus. Nulla blandit at justo non feugiat. Nulla auctor metus ut nunc sollicitudin, ac cursus erat fringilla.</p>
+            <p><strong>LEARN MORE</strong></p>
           </div>
         </div>
       </div>
     </div>
 
     <div class="row">
-      <div class="col-md-12 height1 footer">
+      <div class="col-md-12 height1 footer flexSingle">
         <div> The Surf Website, Copyright, 2018</div>
       </div>
     </div>
