@@ -19,13 +19,13 @@
     <![endif]-->
 
   <style media="screen">
-  @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700');
+  @import url('https://fonts.googleapis.com/css?family=Sumana:400,700');
     .height1{
-      height: 50px;
+      height: 80px;
     }
 
     .height2{
-      height: 200px;
+      height: 750px;
     }
 
     .height3{
@@ -35,11 +35,13 @@
     .height4{
       height: 130px;
     }
-/*
+
     .header{
-      border-left: 20px solid black;
+      background-image: url("images/background.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
     }
-*/
+
     .flexSingle {
       display: flex;
       justify-content: center;
@@ -48,12 +50,48 @@
     }
 
     .titlefont{
-      font-family: 'Poppins', sans-serif;
-      font-weight: 700;
-      font-size: 120px;
-      color: black;
+      font-family: 'Sumana', serif;
+      font-weight: 400;
+      font-size: 20px;
+      letter-spacing: 10px;
+      color: white;
+      padding: 10px;
+      background-color: black;
     }
 
+    .flexSpaceAround {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .background{
+      background-color: #f9f7f8;
+    }
+
+    p{
+      font-family: 'Sumana', serif;
+    }
+
+    /* NAVIGATION */
+    ul li {
+      list-style: none;
+      text-transform: uppercase;
+      padding-top: 30px;
+    }
+
+    ul li a {
+      text-decoration: none;
+      font-family: 'Sumana', serif;
+      color: black;
+      font-size: 15px;
+    }
+
+    ul li a:hover {
+      text-decoration: none;
+      color: black;
+      font-weight: 700;
+    }
   </style>
 </head>
 
@@ -61,25 +99,32 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12 height2 flexSingle header">
-        <p class="titlefont">LOOKBOOK 2018</p>
+        <p class="titlefont">SUMMER ESSENTIALS 2018</p>
       </div>
     </div>
 
     <div class="row">
-      <div class="col-md-12 header height1">
+      <div class="col-md-12 height1">
+        <ul class="flexSpaceAround">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Lookbook</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
       </div>
     </div>
 
     <div class="row">
-      <div class="col-md-8 header output">
+      <div class="col-md-8 output background">
       </div>
-      <div class="col-md-4 height3">
-        <img src="fashion.jpg" alt="fashion photo">
+      <div class="col-md-4">
+        <img src="images/fashion.jpg" alt="fashion photo">
       </div>
     </div>
 
     <div class="row">
-      <div class="col-md-12 height4 header">
+      <div class="col-md-12 height4 footer flexSpaceAround">
+        <p>&copy; Guelph-Humber 2018</p>
       </div>
     </div>
   </div>
@@ -89,31 +134,13 @@
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-  <script type="text/javascript">
-    //when the document is loaded
-    $(document).ready(function() {
-      //this function gets a random color between between 0 and 255
-      function getRandomColor() {
-        return Math.floor(Math.random() * 255);
-      }
-      //get all the elements (divs) with the class .randomColor
-      var randomColor = $(".randomColor");
-      //loop through all elements
-      //for each element, change the css backgorund color to RGB + three random colors
-      $.each(randomColor, function(index, item) {
-        $(this).css("background-color", "RGB(" + getRandomColor() + "," + getRandomColor() + "," + getRandomColor() + ")");
-      })
-
-    })
-  </script>
-
   <script>
     var cats = [{
         "item": "BLUES BABY CHAMBRAY TOP",
         "brand": "Billabong",
         "size": "Small",
         "price": "$56.95",
-        "imgUrl": "shirt.jpg"
+        "imgUrl": "images/shirt.jpg"
       },
 
       {
@@ -121,7 +148,7 @@
         "brand": "Billabong",
         "size": "Medium",
         "price": "$63.95",
-        "imgUrl": "shorts.jpg"
+        "imgUrl": "images/shorts.jpg"
       },
 
       {
@@ -129,7 +156,7 @@
         "brand": "American Eagle",
         "size": 7,
         "price": "$37.83",
-        "imgUrl": "shoes.jpg"
+        "imgUrl": "images/shoes.jpg"
       },
 
       {
@@ -137,7 +164,7 @@
         "brand": "American Eagle",
         "size": "One Size",
         "price": "$16.36",
-        "imgUrl": "earrings.jpg"
+        "imgUrl": "images/earrings.jpg"
       },
 
       {
@@ -145,7 +172,7 @@
         "brand": "American Eagle",
         "size": "One Size",
         "price": "$20.15",
-        "imgUrl": "sunglasses.jpg"
+        "imgUrl": "images/sunglasses.jpg"
       },
     ];
 
@@ -171,7 +198,6 @@
         "<td>"+cats[i].price+"</td>" +
         "<td>"+cats[i].size+"</td>" +
         "</tr>";
-
       }
       html += "</table>";
       $(".output").html(html);
