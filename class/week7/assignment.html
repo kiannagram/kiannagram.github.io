@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Class Week 7 | Kianna</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <style media="screen">
+  @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700');
+    .height1{
+      height: 50px;
+    }
+
+    .height2{
+      height: 200px;
+    }
+
+    .height3{
+      height: 500px;
+    }
+
+    .height4{
+      height: 130px;
+    }
+/*
+    .header{
+      border-left: 20px solid black;
+    }
+*/
+    .flexSingle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .titlefont{
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 120px;
+      color: black;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 height2 flexSingle header">
+        <p class="titlefont">LOOKBOOK 2018</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 header height1">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8 header output">
+      </div>
+      <div class="col-md-4 height3">
+        <img src="fashion.jpg" alt="fashion photo">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 height4 header">
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript">
+    //when the document is loaded
+    $(document).ready(function() {
+      //this function gets a random color between between 0 and 255
+      function getRandomColor() {
+        return Math.floor(Math.random() * 255);
+      }
+      //get all the elements (divs) with the class .randomColor
+      var randomColor = $(".randomColor");
+      //loop through all elements
+      //for each element, change the css backgorund color to RGB + three random colors
+      $.each(randomColor, function(index, item) {
+        $(this).css("background-color", "RGB(" + getRandomColor() + "," + getRandomColor() + "," + getRandomColor() + ")");
+      })
+
+    })
+  </script>
+
+  <script>
+    var cats = [{
+        "item": "BLUES BABY CHAMBRAY TOP",
+        "brand": "Billabong",
+        "size": "Small",
+        "price": "$56.95",
+        "imgUrl": "shirt.jpg"
+      },
+
+      {
+        "item": "DRIFT AWAY DENIM SHORT",
+        "brand": "Billabong",
+        "size": "Medium",
+        "price": "$63.95",
+        "imgUrl": "shorts.jpg"
+      },
+
+      {
+        "item": "POINTED TOE MULE",
+        "brand": "American Eagle",
+        "size": 7,
+        "price": "$37.83",
+        "imgUrl": "shoes.jpg"
+      },
+
+      {
+        "item": "LARGE GOLD HOOP EARRINGS",
+        "brand": "American Eagle",
+        "size": "One Size",
+        "price": "$16.36",
+        "imgUrl": "earrings.jpg"
+      },
+
+      {
+        "item": "TOP BAR ROUND SUNGLASSES",
+        "brand": "American Eagle",
+        "size": "One Size",
+        "price": "$20.15",
+        "imgUrl": "sunglasses.jpg"
+      },
+    ];
+
+    $(document).ready(function() {
+      //$(".output").html("test output");
+
+      var html = "<table class='table'>" +
+        "<tr>" +
+        "<th>Picture</th>" +
+        "<th>Item</th>" +
+        "<th>Brand</th>" +
+        "<th>Price</th>" +
+        "<th>Size</th>" +
+        "</tr>";
+
+      //here is the loop of the array "cats"
+      for (var i = 0; i < cats.length; i++) {
+        console.log("i " + i);
+        html+= "<tr>" +
+        "<td><img src='"+cats[i].imgUrl+"'/></td>" +
+        "<td>"+cats[i].item+"</td>"+
+        "<td>"+cats[i].brand+"</td>" +
+        "<td>"+cats[i].price+"</td>" +
+        "<td>"+cats[i].size+"</td>" +
+        "</tr>";
+
+      }
+      html += "</table>";
+      $(".output").html(html);
+    });
+  </script>
+</body>
+
+</html>
