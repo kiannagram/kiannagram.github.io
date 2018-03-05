@@ -1,0 +1,46 @@
+[
+  {
+    "brand":"Nike",
+    "type":"Running Shoe",
+    "material":"Cloth",
+    "color":"Blue",
+    "laces": true,
+    "waterproof": false
+  },
+
+  {
+    "brand":"Vans",
+    "type":"sneaker",
+    "material":"Canvas",
+    "color":"white",
+    "laces": true,
+    "waterproof": false
+  },
+
+  {
+    "brand":"Hunter",
+    "type":"Rain Boots",
+    "material":"Rubber",
+    "color":"Red",
+    "laces": false,
+    "waterproof": true
+  },
+
+  {
+    "brand":"Aldo",
+    "type":"Ankle Boots",
+    "material":"Leather",
+    "color":"Black",
+    "laces": false,
+    "waterproof": false
+  },
+
+  {
+    "brand":"Brikenstock",
+    "type":"Sandals",
+    "material":"Leather",
+    "color":"Brown",
+    "laces": false,
+    "waterproof": false
+  },
+]
