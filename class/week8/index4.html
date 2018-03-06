@@ -22,7 +22,8 @@
 <body>
   <div class="container">
     <div class="row">
-
+      <div class="output">
+      </div>
     </div>
   </div>
 
@@ -32,7 +33,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
   <script>
-    var url = "class/week8/assets/myjson.json";
+    var url = "https://kiannagram.github.io/class/week8/assets/myjson.json";
     $.getJSON(url).done(function(data) {
       console.log("success! ");
       console.dir(data);
