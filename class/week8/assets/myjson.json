@@ -3,8 +3,8 @@
     "type": "Running Shoe",
     "material": "Cloth",
     "color": "Blue",
-    "laces": true,
-    "waterproof": false
+    "laces": "yes",
+    "waterproof": "no"
   },
 
   {
@@ -12,8 +12,8 @@
     "type": "sneaker",
     "material": "Canvas",
     "color": "white",
-    "laces": true,
-    "waterproof": false
+    "laces": "yes",
+    "waterproof": "no"
   },
 
   {
@@ -21,8 +21,8 @@
     "type": "Rain Boots",
     "material": "Rubber",
     "color": "Red",
-    "laces": false,
-    "waterproof": true
+    "laces": "no",
+    "waterproof": "yes"
   },
 
   {
@@ -30,8 +30,8 @@
     "type": "Ankle Boots",
     "material": "Leather",
     "color": "Black",
-    "laces": false,
-    "waterproof": false
+    "laces": "no",
+    "waterproof": "no"
   },
 
   {
@@ -39,7 +39,7 @@
     "type": "Sandals",
     "material": "Leather",
     "color": "Brown",
-    "laces": false,
-    "waterproof": false
+    "laces": "no",
+    "waterproof": "no"
   }
 ];
