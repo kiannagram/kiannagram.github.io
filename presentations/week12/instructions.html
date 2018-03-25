@@ -30,9 +30,7 @@
         font-size: 40px;
       }
 
-      h3{
-        padding-left: 30px;
-      }
+      h3{ padding-left: 30px; }
 
       header{
         height: 200px;
@@ -53,9 +51,14 @@
       }
 
       img{
-        width: 50%;
+        width: 10%;
         border: 1px solid black;
         margin-bottom: 20px;
+
+        /*display: block;
+        margin-left: auto;
+        margin-right: auto; */
+        margin-left: 30px;
       }
 
       a{
@@ -74,21 +77,17 @@
         margin-left: 30px;
       }
 
-      .underline{
-        border-bottom: 1px solid black;
-      }
+      .underline{ border-bottom: 1px solid black; }
 
-      #upload{
-        list-style-type: decimal;
-      }
+      #upload{ list-style-type: decimal; }
 
-      .rubric{
-        list-style-type: none;
-      }
+      #image{ background-color: white;}
 
-      .rubric li{
-        margin-bottom: 20px;
-      }
+      #image:hover{ border-bottom: none; }
+
+      .rubric{ list-style-type: none; }
+
+      .rubric li{ margin-bottom: 20px; }
 
       @media screen and (max-width: 690px) {
         h1{ padding-top: 50px; }
@@ -142,8 +141,8 @@
       </div>
 
       <h2>inspiration.</h2>
-      <p>If you're stumped, <a href="Style Guide Example.png">this is a good example</a> of what the end result should include. Use this as a guideline to help you structure your own style guide, but remember to be creative! Make your style guide unique.</p>
-      <!-- <img src="Style Guide Example.png" alt="An example of a style guide."> -->
+      <p>If you're stumped, below is a good example of what the end result should include. Use this as a guideline to help you structure your own style guide, but remember to be creative! Make your style guide unique.</p>
+      <a href="Style Guide Example.png" id="image"><img src="Style Guide Example.png" alt="An example of a style guide."></a>
       <p>Looking for more inspiration? Click <a href="https://www.canva.com/learn/50-meticulous-style-guides-every-startup-see-launching/">this link</a> for more excellent style guide examples.</p>
 
       <h2>submission instructions.</h2>
