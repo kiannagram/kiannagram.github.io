@@ -1,0 +1,40 @@
+{
+  "Sheet1": {
+    "1": {
+      "itemId": 1,
+      "kiaGraTitle": "Vintage Velvet Couch",
+      "kiaGraPrice": 1700,
+      "kiaGraImgUrl": "kiannagram.github.io/class/week11/images/sofa.jpg"
+    },
+    "2": {
+      "itemId": 2,
+      "kiaGraTitle": "Modern Coffee Table",
+      "kiaGraPrice": 150,
+      "kiaGraImgUrl": "kiannagram.github.io/class/week11/images/table.jpg"
+    },
+    "3": {
+      "itemId": 3,
+      "kiaGraTitle": "Throw Pillows",
+      "kiaGraPrice": 40,
+      "kiaGraImgUrl": "kiannagram.github.io/class/week11/images/pillows.jpg"
+    },
+    "4": {
+      "itemId": 4,
+      "kiaGraTitle": "Modern Floor Lamp",
+      "kiaGraPrice": 75,
+      "kiaGraImgUrl": "kiannagram.github.io/class/week11/images/lamp.jpg"
+    },
+    "5": {
+      "itemId": 5,
+      "kiaGraTitle": "Snake Plant",
+      "kiaGraPrice": 20,
+      "kiaGraImgUrl": "kiannagram.github.io/class/week11/images/plant.jpg"
+    },
+    "6": {
+      "itemId": 6,
+      "kiaGraTitle": "Shag Rug",
+      "kiaGraPrice": 200,
+      "kiaGraImgUrl": "kiannagram.github.io/class/week11/images/rug.jpg"
+    }
+  }
+}
