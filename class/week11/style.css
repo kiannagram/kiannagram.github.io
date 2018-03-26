@@ -55,6 +55,10 @@ hr{
   align-items: center;
 }
 
+.photo img{
+  width: 100%;
+}
+
 .selectContainer{
   width: 50%;
   margin: 0 auto;

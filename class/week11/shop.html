@@ -46,7 +46,7 @@
       <div class="col-md-2 adsLeft">
       </div>
 
-      <div class="col-md-8 output flexSpaceAround">
+      <div class="col-md-8 output flexSpaceAround photo">
       </div>
 
       <div class="col-md-2 adsRight">
@@ -92,7 +92,8 @@ function getOptions(){
   var html="";
   var options = {
        "Anderson 1": "https://andersonguelphjs.github.io/class/week11/myJSON.json",
-       "Anderson 2": "https://andersonguelphjs.github.io/class/week11/myJSON2.json"
+       "Anderson 2": "https://andersonguelphjs.github.io/class/week11/myJSON2.json",
+        "Kianna":"https://kiannagram.github.io/class/week11/kiaGraJSON.json"
      };
 for (var key in options){
   html+="<option value='"+options[key]+"'>"+key+"</option>";
@@ -139,10 +140,12 @@ function writeJSONToDOM(d){
         html+="<div data-id='1' class='itemContainer'>"
 
         for ( var key in d[jsonObj]){
-          if (key ==="itemId"){
+          var str = String(d[jsonObj][key]);
+
+          if (key ==="itemId"){
             continue;
           }
-          if (d[jsonObj][key].indexOf("github")!==-1){
+          if (str.indexOf("github")!==-1){
             html+="<div class='imageContainer'><img src='https://"+d[jsonObj][key]+"'></div>";
           }
 
