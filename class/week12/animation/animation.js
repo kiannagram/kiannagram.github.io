@@ -158,6 +158,31 @@ var spriteImages = [{
     "height": 694,
     "name": "colour goat"
   },
+  { "spriteMapUrl": "https://bill-curne.github.io/class/animation/images/heisenberg.png",
+    "numFrames": 10,
+    "width": 1300,
+    "height": 130,
+    "name": "heisenberg"
+  },
+  {"spriteMapUrl":"https://sarahellul.github.io/class/week12/animation/images/stitch3.png",
+    "numFrames": 8,
+    "width": 1928,
+    "height": 240,
+    "name": "stitch"
+  },
+  { "spriteMapUrl":"https://julianneferr.github.io/class/week12/animation/images/lightbulb.png",
+    "numFrames": 7,
+    "width": 1000,
+    "height": 200,
+    "name": "lightbulb"
+  },
+  {
+    "spriteMapUrl": "https://chell-github.github.io/class/week12/images/masae.png",
+    "numFrames": 29,
+    "width": 2900,
+    "height": 100,
+    "name": "masae"
+  },
   {
     "spriteMapUrl": "images/catWalking.png",
     "numFrames": 12,
