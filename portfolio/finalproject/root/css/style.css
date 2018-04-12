@@ -103,7 +103,7 @@ p{
 
 
 /**
-*ABOUT PAGE 
+*ABOUT PAGE
 **/
 #profile-photo{
     float: left;
@@ -112,7 +112,7 @@ p{
     margin-top: 10px;
 }
 
-#about-bre{ 
+#about-bre{
     padding-right: 20px;
     padding-top: 70px;
     overflow: hidden;
@@ -177,14 +177,14 @@ p{
     padding: 2vw;
     padding-top: 80px;
     overflow-x: hidden;
-    z-index: 1; 
+    z-index: 1;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center; 
+    justify-content: center;
     -webkit-justify-content: center;
     position: absolute;
     height: 100%;
-} 
+}
 
 /* Add the scrolling arrows */
 .fa-angle-right::before{
@@ -214,8 +214,8 @@ p{
     overflow-y: hidden;
 }
 
-.horiz-scroll .scroller .scrollable-x::-webkit-scrollbar{ 
-    display: none; 
+.horiz-scroll .scroller .scrollable-x::-webkit-scrollbar{
+    display: none;
     width: .375em;
     max-width: 12px;
 }
@@ -236,15 +236,15 @@ p{
     margin-top: 10px;
     margin-bottom: -160px;
     text-align: center;
-} 
+}
 
 /* Size of the images */
 .horiz-scroll .scroller .scroll-images img{
     width: 27.15%;
-    top: 0; 
+    top: 0;
     -webkit-transition: all 100ms;
-    transition: all 100ms; 
-    position: relative; 
+    transition: all 100ms;
+    position: relative;
 }
 
 /* adjusting the size of the horizontal images in the landscape and portrait sections */
@@ -295,9 +295,9 @@ p{
 **/
 @media only screen and (max-width: 1300px){
     .horiz-scroll .scroller .scroll-images img { width: 30.65%; }
-    
+
     .horiz-scroll .scroller{ max-height: 33vw; }
-    
+
     /* adjusting the horizontal images in the landscape and portrait section */
     #image-3{ width: 66.9%; }
     #image-4{ width: 66.9%; }
@@ -312,9 +312,9 @@ p{
 **/
 @media only screen and (max-width: 1200px){
     .horiz-scroll .scroller .scroll-images img { width: 35%; }
-    
+
     .horiz-scroll .scroller{ max-height: 48vw; }
-    
+
     /* adjusting the horizontal images in the landscape and portrait section */
     #image-3{ width: 76.3%; }
     #image-4{ width: 76.3%; }
@@ -330,7 +330,7 @@ p{
 **/
 @media only screen and (max-width: 1100px){
     .horiz-scroll .scroller .scroll-images img { width: 38.65%; }
-    
+
     /* adjusting the horizontal images in the landscape and portrait section */
     #image-3{ width: 84.3%; }
     #image-4{ width: 84.3%; }
@@ -349,7 +349,7 @@ p{
         padding-top: 10px;
         padding-bottom: 30px;
     }
-    
+
     #social li:nth-child(2){ border-right: none; }
 }
 
@@ -358,7 +358,7 @@ p{
 **/
 @media only screen and (max-width: 950px){
     .horiz-scroll .scroller .scroll-images img { width: 42%; }
-    
+
     /* adjusting the horizontal images in the landscape and portrait section */
     #image-3{ width: 91.6%; }
     #image-4{ width: 91.6%; }
@@ -371,13 +371,13 @@ p{
 /**
 *MOBILE LAYOUT
 **/
-@media only screen and (max-width: 900px){ 
+@media only screen and (max-width: 900px){
     /* ABOUT */
-    h3{ 
+    h3{
         line-height: 64px;
-        font-size: 70px; 
+        font-size: 70px;
     }
-    
+
     #about-bre p{
         font-size: 15px;
         line-height: 19px;
@@ -389,7 +389,7 @@ p{
 **/
 @media only screen and (max-width: 850px){
     .horiz-scroll .scroller .scroll-images img { width: 46%; }
-    
+
     /* adjusting the horizontal images in the landscape and portrait section */
     #image-3{ width: 100.2%; }
     #image-4{ width: 100.2%; }
@@ -409,7 +409,7 @@ p{
         font-size: 40px;
         line-height: 45px;
     }
-    
+
     /* White box around the nav */
     #site-nav::before{
         content: '';
@@ -420,7 +420,7 @@ p{
         top: 28px;
         right: 22px;
     }
-    
+
     /* ABOUT */
     #profile-photo{
         float: none;
@@ -431,13 +431,13 @@ p{
         right: 0;
         left: 0;
     }
-    
+
     #about-bre{
         padding-right: 10px;
         padding-left: 10px;
         padding-top: 20px;
     }
-    
+
     /* social media links */
     #social{
         padding-left: 0px;
@@ -447,11 +447,11 @@ p{
         right: 0;
         left: 0;
     }
-    
+
     /* FOOTER */
     .footer{ display: inherit; }
-    
-    /* LANDSCAPE AND PORTRAIT */ 
+
+    /* LANDSCAPE AND PORTRAIT */
     .horiz-scroll{
         display: initial;
         -webkit-box-orient: vertical;
@@ -515,8 +515,8 @@ p{
 
     .horiz-scroll .scroller .scroll-images img{
         width: auto;
-        top: auto; 
-        -webkit-transition: none; 
+        top: auto;
+        -webkit-transition: none;
         transition: none;
         position: static;
         float: none;
@@ -529,8 +529,8 @@ p{
     }
 
     /* adjusting the horizontal images in the landscape and portrait section */
-    #image-3, #image-4, #image-5, #image-10, #image-13, #portrait-3{ 
-        width: initial; 
+    #image-3, #image-4, #image-5, #image-10, #image-13, #portrait-3{
+        width: initial;
         float: none;
         margin-right: 0;
         max-height: 100%;
@@ -543,7 +543,7 @@ p{
     .horiz-scroll .scroller .scroll-images img.focused{ display: none; }
 
     .invisible{ display: none; }
-    
+
     /* HAMBURGER NAV */
     #site-nav{
         position: fixed;
@@ -552,17 +552,17 @@ p{
         margin-top: 0;
         float: none;
     }
-    
+
     /* hide nav links */
     #site-nav ul{ display: none; }
-    
+
     /* reveal the "show menu" button */
     #site-nav #show-menu-button{
         display: block;
         border-top: 4px solid black;
         border-bottom: 4px solid black;
     }
-    
+
     /* add the middle hamburger line */
     #site-nav #show-menu-button::before{
         content: '';
@@ -571,7 +571,7 @@ p{
         width: 35px;
         margin-top: 9px;
     }
-    
+
     /* hide/show menu buttons */
     #site-nav > a{
         position: absolute;
@@ -585,14 +585,14 @@ p{
     }
 
     #site-nav > a span{ display: none; }
-    
+
     /* when mobile menu is visible */
     #site-nav:target{
         background-color: rgba(255,255,255,0.95);
         left: 0;
         bottom: 0;
-    } 
-    
+    }
+
     /* reveal the nav links */
     #site-nav:target ul{
         display: block;
@@ -602,22 +602,22 @@ p{
         -webkit-transform: translate(-50%,-50%);
         transform: translate(-50%,-50%);
         width: 80%;
-        
+
         -webkit-animation-name: fade-in;
         animation-name: fade-in;
         -webkit-animation-duration: 1.5s;
         animation-duration: 1.5s;
         -webkit-animation-iteration-count: 1;
         animation-iteration-count: 1;
-    } 
-    
+    }
+
     /* make the revealed nav vertical again */
     #site-nav:target li{
         float: none;
         margin: 0;
         text-align: center;
         border-bottom: 2px solid black;
-        
+
         -webkit-animation-name: slide-in;
         animation-name: slide-in;
         -webkit-animation-duration: 0.333s;
@@ -626,28 +626,28 @@ p{
         animation-iteration-count: 1;
         -webkit-animation-fill-mode: backwards;
         animation-fill-mode: backwards;
-    } 
-    
+    }
+
     #site-nav:target li:nth-child(2){ -webkit-animation-delay: 0.333s; animation-delay: 0.333s; }
-    
-    #site-nav:target li:last-child{ 
-        -webkit-animation-delay: 0.666s; 
+
+    #site-nav:target li:last-child{
+        -webkit-animation-delay: 0.666s;
         animation-delay: 0.666s;
         border-bottom: none;
     }
-    
+
     #site-nav:target ul a{
         display: block;
         font-size: 180%;
         line-height: 2.5;
-    } 
-    
+    }
+
     /* hide the "show menu" button */
-    #site-nav:target #show-menu-button{ -webkit-animation: show-menu-icon 0.5s 1 both; animation: show-menu-icon 0.5s 1 both; } 
-    
+    #site-nav:target #show-menu-button{ -webkit-animation: show-menu-icon 0.5s 1 both; animation: show-menu-icon 0.5s 1 both; }
+
     /* reveal the "hide menu" button */
     #site-nav:target #hide-menu-button{ display: block; }
-    
+
     #site-nav:target #hide-menu-button::before,
     #site-nav:target #hide-menu-button::after{
         content: '';
@@ -658,11 +658,11 @@ p{
         top: 11px;
         -webkit-transform: rotate(41deg);
         transform: rotate(41deg);
-        
+
         -webkit-animation: hide-menu-icon-before 1s 1 both;
         animation: hide-menu-icon-before 1s 1 both;
-    } 
-    
+    }
+
     /* rotate one line the other way */
     #site-nav:target #hide-menu-button::after{
         -webkit-transform: rotate(-41deg);
@@ -693,14 +693,14 @@ p{
 
 @-webkit-keyframes show-menu-icon{
     0%{ -webkit-transform: rotate(0deg); transform: rotate(0deg); }
-    50%{ 
-        -webkit-transform: rotate(180deg); 
+    50%{
+        -webkit-transform: rotate(180deg);
         transform: rotate(180deg);
         height: 26px;
         top: 10px;
     }
-    100%{ 
-        -webkit-transform: rotate(180deg); 
+    100%{
+        -webkit-transform: rotate(180deg);
         transform: rotate(180deg);
         height: 4px;
         top: 22px;
@@ -709,14 +709,14 @@ p{
 
 @keyframes show-menu-icon{
     0%{ -webkit-transform: rotate(0deg); transform: rotate(0deg); }
-    50%{ 
-        -webkit-transform: rotate(180deg); 
+    50%{
+        -webkit-transform: rotate(180deg);
         transform: rotate(180deg);
         height: 30px;
         top: 35px;
     }
-    99%{ 
-        -webkit-transform: rotate(180deg); 
+    99%{
+        -webkit-transform: rotate(180deg);
         transform: rotate(180deg);
         height: 0px;
         top: 45px;
@@ -781,8 +781,3 @@ p{
         transform: rotate(-41deg);
     }
 }
-
-
-
-
-
